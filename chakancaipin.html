@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<meta name="viewport" content="width=750, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/chakan.css"/>
+	</head>
+	<body ng-controller="menuController">
+		<header>
+			<h1><a href="index.html"></a></h1>三斤耗儿鱼
+		</header>
+			<ul class="content">
+				<h2>
+					<img src="img/user1.png"/><span>阿国是唐</span>
+				</h2>
+				<li ng-repeat="item in list">
+					<span class="name">{{item.name}}</span>
+					<span class="price">{{item.price | currency:"&yen"}}<i>/{{item.unit}}</i></span>
+					<div class="num">
+						<span class="reduce" ng-click="reduce($index)" ng-if="item.num>0"></span>
+							<span ng-if="item.num>0">{{item.num}}</span>
+						<span class="add" ng-click="add($index)"></span>
+					</div>
+				</li>
+			</ul>
+		<div class="tanchuang" ng-show="flag">
+			<div class="chuangkou">
+				<p>确定让厨房开始制作菜品了吗？</p>
+				<span ng-click="tanchuang()">取消</span>
+				<a href="chufang.html">确定</a>
+			</div>
+		</div>
+		<footer>
+			已点{{total}}道菜&nbsp;/{{totalPrice}}元
+			<span ng-class="{red:total}" class="chakan" ng-click="tanchuang()">传送厨房</span>
+		</footer>
+	</body>
+	<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/chakan.js" type="text/javascript" charset="utf-8"></script>
+</html>

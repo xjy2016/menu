@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta name="viewport" content="width=750, user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+</head>
+<body ng-controller="myController">
+	<header id="header" class="index-header">
+		<h1>三斤耗儿鱼</h1>
+		<span>渝北店，8号桌</span>
+	</header>
+
+	<div class="main">
+		<ul class="nav">
+			<li ng-class="{true: 'active'}[list.ifChose]" ng-repeat="list in allData" ng-click="changeNav($index)">
+				<a href="" title="">
+					<i class="line" ng-hide="$first"></i>
+					<span class="nav-pic {{list.class}}"></span>
+					{{ list.name }}
+				</a>
+			</li>
+		</ul>
+		<div class="list">
+			<h3>{{ dinnerTitle }}</h3>
+			<ul class="dinner-list">
+				<li ng-repeat="item in dinnerList">
+					<div class="dinner-pic">
+						<img ng-src="{{item.pic}}" alt="">
+						<span class="zhuo"><i></i>同桌已点{{item.tongzhuo}}份</span>
+					</div>
+					
+					<h5 class="name">{{ item.name }}</h5>
+					<span class="name"><i>￥{{item.price}}</i>/{{item.unit}}</span>
+					<div class="num">
+						<span class="reduce" ng-click="reduce($index,item.id)" ng-if="item.num>0"></span>
+							<span ng-if="item.num>0">{{item.num}}</span>
+						<span class="add" ng-click="add($index,item.id)"></span>
+					</div>
+					
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+	<footer>
+		已点{{total}}道菜/&nbsp;{{totalPrice}}元
+		<a href="chakancaipin.html"  ng-class="{red:total}" class="chakan">查看菜品</a>
+	</footer>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/mian.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

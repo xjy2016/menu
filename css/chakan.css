@@ -1,0 +1,177 @@
+p,h1,h2,h3,h4,h5,li,ul{
+	margin: 0;
+	padding: 0;
+}
+img{
+	border: none;
+}
+i{
+	font-style: normal;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+html,body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	max-width: 750px;
+	min-width: 320px;
+	background-color: #f4f4f4;
+	margin: 0 auto;
+}
+header{
+	width: 100%;
+	height: 100px;
+	background: #fff;
+	font: 36px/100px "黑体";
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+header h1{
+	width: 100px;
+	height: 100px;
+	background:url(../img/left.png) no-repeat center;
+	position: absolute;
+}
+header h1 a{
+	padding: 30px;
+	display: inline-block;
+}
+.content{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 120px;
+	bottom: 120px;
+	padding: 0 30px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	overflow:scroll;
+}
+.content h2{
+	height: 87px;
+	line-height: 87px;
+}
+.content h2 *{
+	float: left;
+}
+.content img{
+	margin-top: 20px;
+	margin-right: 20px;
+}
+.content li{
+	height: 87px;
+	position: relative;
+	font: 32px/87px "黑体";
+	border-bottom: 1px solid #ccc;
+}
+.price{
+	position: absolute;
+	right: 211px;
+	font-family: arial;
+}
+.price i{
+	font-size: 28px;
+	color:#999 ;
+}
+.num{
+	height: 48px;
+	position: absolute;
+	right: 10px;
+	bottom: 20px;
+}
+.num span{
+	width: 48px;
+	height: 48px;
+	float: left;
+}
+.num span:nth-child(2){
+	font: 32px/1.5 "微软雅黑";
+	text-align: center;
+	margin: 0 15px;
+}
+.add{
+	background: url(../img/add.png) center;
+	cursor: pointer;
+}
+.reduce{
+	background: url(../img/reduce.png) center;
+	cursor: pointer;
+}
+.tanchuang{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+	background: rgba(0,0,0,0.5);
+}
+.chuangkou{
+	width:540px ;
+	position: absolute;
+	left:50%;
+	top: 50%;
+	height: 240px;
+	margin-left: -270px;
+	margin-top: -120px;
+	background: #fff;
+	border-radius: 10px;
+}
+.chuangkou p{
+	font: 32px/160px "黑体";
+	text-align: center;
+	border-bottom: 1px solid #eee;
+}
+.chuangkou span,
+.chuangkou a{
+	float: left;
+	width: 50%;
+	line-height: 80px;
+	color: #f34336;
+	font-size: 32px;
+	text-align: center;
+	box-sizing: border-box;
+	border-right: 1px solid #eee;
+	cursor: pointer;
+}
+.chuangkou a{
+	border: none;
+}
+
+footer{
+	width: 100%;
+	height: 100px;
+	font: 32px/100px "黑体";
+	position: absolute;
+	text-indent: 26px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	background:#3e3a39 ;
+}
+.chakan{
+	width: 250px;
+	height: 98px;
+	background-color: #6b615e;
+	display: block;
+	float: right;
+	font: 32px/98px "微软雅黑";
+	text-align: center;
+	color: #999;
+	cursor: pointer;
+}
+.red{
+	background: #f33;
+	color: white;
+}
