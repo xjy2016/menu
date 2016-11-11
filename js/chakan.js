@@ -1,4 +1,4 @@
-angular.module('myApp',[])
+angular.module('myApp2',[])
 .controller('menuController',['$scope',function($scope){
 	$scope.total = 0;
 	$scope.totalPrice = 0;
@@ -42,10 +42,9 @@ angular.module('myApp',[])
 			})
 			$scope.list = arr1;
 			console.log($scope.list)
-			localStorage.setItem("list",angular.toJson($scope.list))
-			count();
-			console.log(localStorage.getItem("list"))
 		}
+		localStorage.setItem("list",angular.toJson($scope.list))
+		count();
 		
 	}
 	function count(){
